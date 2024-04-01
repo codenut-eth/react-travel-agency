@@ -1,0 +1,36 @@
+$font-padrao: "Mulish", sans-serif;
+$font-tt: "Source Code Pro", monospace;
+
+$corPrincipal: var(--primary-color);
+$corTexto: var(--text-color);
+
+@mixin grid($wd: 100%, $jContent: space-between) {
+    width: $wd;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: $jContent;
+    -ms-justify-content: $jContent;
+    justify-content: $jContent;
+}
+
+@mixin pDesc($cor: #333, $pt: 1.667rem) {
+    font-size: 1rem;
+    line-height: 1.7;
+    padding-top: $pt;
+    color: $cor;
+}
+
+p {
+    @include pDesc;
+}
+
+
+@mixin res($res: 500px) {
+    @media screen and (max-width: $res) {
+        @content;
+    }
+}

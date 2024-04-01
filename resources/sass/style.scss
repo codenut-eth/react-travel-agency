@@ -1,0 +1,236 @@
+@import "mixings";
+
+:root {
+    --primary-color: #f4aa2e;
+    --text-color: #252733;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@media (-webkit-device-pixel-ratio: 1.25) {
+    body {
+        zoom: 0.8;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+svg,
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-size: 12px;
+    font-family: $font-padrao;
+
+    @media only screen and (min-width: 1280px) {
+        font-size: 16px;
+    }
+}
+
+body {
+    position: relative;
+    height: auto;
+    background-color: #fdfdfd;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+select,
+textarea {
+    font-family: $font-padrao;
+    font-weight: normal;
+}
+
+.grid {
+    width: min(90%, 98.125rem);
+    margin: 0 auto;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+
+    &.small {
+        width: min(90%, 98.125rem);
+    }
+}
+
+strong {
+    font-weight: 800;
+}
+
+a.button {
+}
+
+button {
+    font-family: $font-padrao;
+}
+
+button.button {
+    background-color: $corPrincipal;
+    text-align: center;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    outline: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+
+    .ico {
+        display: inline-table;
+        padding: 0 0.6rem 0 1rem;
+    }
+}
+
+.form-container {
+    @include grid();
+    gap: 10px;
+    row-gap: 20px;
+    margin-top: 20px;
+    justify-content: flex-start;
+
+
+    .parsley-type,
+    .parsley-required{
+        color: #f12b2c;
+        display: block;
+        margin: 3px;
+        font-size: 12px;
+    }
+
+    .campField {
+        width: 100%;
+
+        p:first-child{
+            margin: 0 5px 5px 5px;
+        }
+
+        &.w50 {
+            width: calc(50% - 10px);
+        }
+
+        &.w30 {
+            width: calc(30% - 10px);
+        }
+
+        &.w40 {
+            width: calc(40% - 10px);
+        }
+        
+        &.w45 {
+            width: calc(45% - 10px);
+        }
+
+        &.w70 {
+            width: calc(70% - 10px);
+        }
+
+        &.w16 {
+            width: calc(16.66666666666667% - 10px);
+        }
+
+        &.w60 {
+            width: calc(60% - 10px);
+        }
+
+        &.w55 {
+            width: calc(55% - 10px);
+        }
+
+        &.w66 {
+            width: calc(66.66666% - 10px);
+        }
+
+        &.w33 {
+            width: calc(33.33333% - 10px);
+        }
+
+        &.w40 {
+            width: calc(40% - 10px);
+        }
+
+        &.w20 {
+            width: calc(20% - 10px);
+        }
+
+        &.w25 {
+            width: calc(25% - 10px);
+        }
+
+        .textfield {
+            width: 100%;
+            padding: 1rem 1.25rem;
+            font-size: 1rem;
+            background-color: #F9F9F9;
+            border: 1px solid #d6d6d6;
+            color: $corTexto;
+            border-radius: 12px;
+
+            &.parsley-error{
+                border-color: #f12b2c;
+                background-color: rgba($color: #f12b2c, $alpha: .05);
+            }
+        }
+
+        ::placeholder {
+            color: $corTexto;
+            opacity: 0.8;
+        }
+
+        textarea.textfield {
+            resize: vertical;
+            height: 180px;
+        }
+    }
+
+    .btns-container{
+        @include grid();
+        justify-content: flex-end;
+        align-items: center;
+        align-content: center;
+        gap: 20px;
+
+        &.w33{
+            width: 33.33333%;
+            align-self: flex-end;
+
+            button.button{
+                width: 100%;
+            }
+        }
+
+        a.button{
+            margin-top: 0;
+        }
+    }
+}
+
+
+
+
+@import "header";
+@import "pages";
+@import "footer";

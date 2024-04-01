@@ -1,0 +1,82 @@
+.sec-alteracao-pedidos{
+    .form-container{
+        gap: 20px;
+
+        .col-1{
+            @include grid();
+            width: calc(55% - 10px);
+
+            .select-passeios{
+                background-color: #F2F2F2;
+                padding: 14px;
+                border-radius: 12px;
+                width: 100%;
+                min-height: 300px;
+
+                .radio{
+                    @include grid();
+                    align-items: center;
+                    padding: 14px;
+                    border-radius: 12px;
+                    background-color: #FFFFFF;
+                    box-shadow: 4px 4px 12px rgba(0,0,0,.10);
+
+                    span.input{
+                        width: 50px;
+                        text-align: center
+                    }
+
+                    span.desc-passeio{
+                        @include grid();
+                        width: calc(100% - 50px);
+                        justify-content: flex-start;
+
+                        p{
+                            padding-top: 0;
+                            font-size: 12px;
+                            width: 100%;
+                        }
+
+                        .data{
+                            width: auto !important;
+                            margin-right: 2rem;
+                        }
+
+                        .qtd_passeio{
+                            width: auto !important;
+                        }
+
+                    }
+                }
+            }
+
+        }
+
+        .col-2{
+            @include grid();
+            width: calc(45% - 10px);
+
+            .desc-devolucao{
+                background-color: #F2F2F2;
+                padding: 14px;
+                border-radius: 12px;
+                width: 100%;
+                min-height: 300px;
+
+            }
+
+
+            label.radio{
+                margin: 5px 0;
+                display: inline-table;
+                padding: 10px 20px;
+                border: 1px solid #F2F2F2;
+                border-radius: 10px;
+            }
+        }
+
+        .btns-container{
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,73 @@
+.sec-devolucoes{
+
+    .container-table{
+        border-color: #595959;
+        padding: 0;
+        border-radius: 12px;
+        border-top: .5px;
+
+        .tt-table{
+            border: .5px solid #595959;
+            width: 100%;
+            padding: 15px;
+            border-radius: 11px;
+            justify-content: flex-end;
+
+            .home-filter{
+                width: 100%;
+            }
+
+            .home-search{
+                width: 40%;
+
+                input{
+                    width: 100%;
+                    background-color: #F2F2F2;
+                    padding: 1.1rem;
+                }
+            }
+
+            .filter-date{
+                @include grid();
+                align-items: center;
+                width: 60%;
+                padding-right: 20px;
+
+                .txt{
+                    width: 20%;
+                    text-align: right;
+                    font-weight: bold;
+                    display: block;
+                }
+
+
+                .input{
+                    width: 30%;
+
+
+                    input{
+                        width: 100%;
+                        padding: 1.1rem;
+                    }
+                }
+
+            }
+        }
+
+        .responsive-table__body__text{
+            p{
+                font-weight: bold;
+            }
+
+            &.responsive-table__body__text--RealizarDevolucao{
+                label{
+                    margin: 0 10px;
+                }
+            }
+
+        }
+
+
+    }
+
+}

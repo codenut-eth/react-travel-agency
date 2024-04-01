@@ -1,0 +1,45 @@
+@import "mixings";
+@import "componentes";
+
+.sec-cadastro {
+    
+    .sec-menu-cadastro {
+        width: 100%;
+    }
+    .sec-menu-cadastro ul {
+        @include grid();
+        background-color: #F4AA2E;
+        border-radius: 12px;
+        padding: 0 20px;
+        margin-top: 10px;
+    }
+
+    .sec-menu-cadastro ul li {
+        text-align: center;
+        display: block;
+
+        a{
+            display: block;
+            padding: 12px 14px;
+            color: #fff;
+            
+            @include res(1440px){
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+
+        a.active{
+            background-color: #ED771B;
+            border-radius: 12px;
+        }
+    }
+
+    .container-cadastro{
+        display: none;
+    }
+
+    .container-cadastro.active{
+        display: block;
+    }
+}

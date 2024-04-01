@@ -1,0 +1,540 @@
+@import "mixings";
+@import "componentes";
+
+.sec-home {
+    .page-layout {
+        &.comercial {
+            // Configuração da tabela
+            .responsive-table__row {
+                display: grid;
+                border-bottom: 1px solid $table-border-color;
+                padding: 0 1.5rem;
+
+                @include min-tablet {
+                    grid-template-columns: 2fr 1.5fr 1fr 1fr 0.4fr;
+                }
+
+                th,
+                td {
+                    padding: 1rem;
+                }
+            }
+
+            .responsive-table__body__text--codOrcamento {
+                @include grid();
+
+                .thumb {
+                    width: 40px;
+                    height: 40px;
+                    background-color: $corPrincipal;
+                    border-radius: 50%;
+                }
+
+                .txt {
+                    width: calc(100% - 50px);
+                }
+            }
+        }
+
+        &.programador {
+            // Configuração da tabela
+            .responsive-table__row {
+                display: grid;
+                border-bottom: 1px solid $table-border-color;
+                padding: 0 1.5rem;
+
+                @include min-tablet {
+                    grid-template-columns: 2fr 1.5fr 1fr 1fr 0.4fr;
+                }
+
+                th,
+                td {
+                    padding: 1rem;
+                }
+            }
+
+            .responsive-table__body__text--nomeCliente {
+                @include grid();
+
+                .thumb {
+                    width: 40px;
+                    height: 40px;
+                    background-color: $corPrincipal;
+                    border-radius: 50%;
+                }
+
+                .txt {
+                    width: calc(100% - 50px);
+                }
+            }
+        }
+
+        &.operador {
+            // Configuração da tabela
+            .responsive-table__row {
+                display: grid;
+                border-bottom: 1px solid $table-border-color;
+                padding: 0 1.5rem;
+                align-content: flex-start !important;
+                align-items: flex-start !important;
+
+                @include min-tablet {
+                    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr;
+                }
+
+                th,
+                td {
+                    padding: 1rem;
+                }
+            }
+
+            .responsive-table__body__text--nomeCliente {
+                @include grid();
+
+                .thumb {
+                    width: 40px;
+                    height: 40px;
+                    background-color: $corPrincipal;
+                    border-radius: 50%;
+                }
+
+                .txt {
+                    width: calc(100% - 60px);
+                }
+            }
+
+            .container-table.fluxo-de-caixa {
+                align-items: center;
+                align-content: center;
+
+                // Configuração da tabela
+                .responsive-table__row {
+                    @include min-tablet {
+                        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+                    }
+
+                    th,
+                    td {
+                        padding: 1rem;
+                    }
+                }
+
+                th,
+                h3,
+                p,
+                input,
+                select,
+                ::placeholder {
+                    color: $corPrincipal;
+                }
+            }
+        }
+
+        &.suporte {
+            // Configuração da tabela
+            .responsive-table__row {
+                display: grid;
+                border-bottom: 1px solid $table-border-color;
+                padding: 0 1.5rem;
+                align-content: flex-start !important;
+                align-items: flex-start !important;
+
+                @include min-tablet {
+                    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 0.5fr;
+                }
+
+                th,
+                td {
+                    padding: 1rem;
+                }
+            }
+
+            .responsive-table__body__text--nomeCliente {
+                @include grid();
+
+                .thumb {
+                    width: 40px;
+                    height: 40px;
+                    background-color: $corPrincipal;
+                    border-radius: 50%;
+                }
+
+                .txt {
+                    width: calc(100% - 60px);
+                }
+            }
+
+            .container-table.passeios-contratados {
+                align-items: center;
+                align-content: center;
+
+                // Configuração da tabela
+                .responsive-table__row {
+                    @include min-tablet {
+                        grid-template-columns: 1fr 1fr 1fr 1fr 0.5fr;
+                    }
+
+                    th,
+                    td {
+                        padding: 1rem;
+                    }
+                }
+            }
+        }
+
+        &.afiliados {
+            .responsive-table__body__text--codOrcamento {
+                @include grid();
+
+                .thumb {
+                    width: 40px;
+                    height: 40px;
+                    background-color: $corPrincipal;
+                    border-radius: 50%;
+                }
+
+                .txt {
+                    width: calc(100% - 50px);
+                }
+            }
+
+            .container-dashboard {
+                @include grid();
+                gap: 20px;
+
+                .item {
+                    width: calc(33.33333% - 20px);
+                    background-color: #3a3a3a;
+                    text-align: center;
+                    padding: 3rem 2rem;
+                    border-radius: 20px;
+
+                    .wrapper-ganhos-por-reserva {
+                        @include grid();
+                        align-items: center;
+                        align-content: center;
+
+                        .txt {
+                            width: calc(100% - 120px);
+                            text-align: left;
+                        }
+
+                        .input {
+                            width: 120px;
+
+                            .textfield {
+                                width: 100%;
+                                padding: 10px;
+                                background-color: #3a3a3a;
+                                color: #fff;
+                                border-radius: 10px;
+                                border-color: #fff;
+                            }
+                        }
+                    }
+
+                    .result-ganhos-por-reserva {
+                        padding-top: 2rem;
+
+                        h3 {
+                            color: #fff;
+                            font-size: 40px;
+                            font-weight: bold;
+                        }
+                    }
+
+                    p {
+                        padding-top: 0;
+                        color: #fff;
+                        font-size: 1.33333rem;
+                        font-weight: light;
+
+                        &.obs {
+                            font-size: 12px;
+                            font-weight: normal;
+                        }
+                    }
+
+                    a.button {
+                        padding: 10px 15px;
+                        border: 1px solid #fff;
+                        background-color: transparent;
+                    }
+
+                    &.pagina-afiliado {
+                        position: relative;
+
+                        img {
+                            position: absolute;
+                            width: 60%;
+                            left: 50%;
+                            transform: translate(-50%, 0);
+                        }
+                    }
+
+                    &.arquivos {
+                        background: url("../imagens/arquivos-e-materiais.jpg");
+                        background-size: cover;
+                        background-position: center;
+                        padding: 0;
+
+                        p {
+                            background-color: #3a3a3a;
+                            padding: 2rem;
+                            border-radius: 19px;
+                        }
+                    }
+                }
+            }
+
+            .grafico {
+                background-color: #3a3a3a;
+                text-align: center;
+                padding: 3rem 2rem;
+                border-radius: 20px;
+                margin: 20px 0;
+
+                .options {
+                    @include grid();
+
+                    .textfield {
+                        min-width: 180px;
+                        padding: 10px;
+                        background-color: #3a3a3a;
+                        color: #fff;
+                        border-radius: 10px;
+                        border-color: #fff;
+                    }
+                }
+
+                .chart-view {
+                    margin-top: 2rem;
+                }
+            }
+        }
+
+        &.financeiro {
+            .container-dashboard {
+                @include grid();
+                gap: 20px;
+            }
+
+            .options {
+                @include grid();
+
+                h3 {
+                    width: 50%;
+                    color: #fff;
+                    text-align: left;
+                    font-size: 20px;
+                    font-weight: 300;
+                }
+
+                .wrapper-inputs {
+                    width: 30%;
+                }
+
+                .textfield {
+                    width: 100%;
+                    padding: 10px;
+                    background-color: #3a3a3a;
+                    color: #fff;
+                    border-radius: 10px;
+                    border-color: #fff;
+                    margin: 3px;
+                }
+            }
+
+            .grafico-analise-mensal {
+                background-color: #3a3a3a;
+                text-align: center;
+                padding: 3rem 2rem;
+                border-radius: 20px;
+                margin: 20px 0;
+                width: calc(60% - 20px);
+
+                .options {
+                    .wrapper-inputs {
+                        @include grid(50%);
+
+                        .textfield {
+                            width: 47%;
+                        }
+                    }
+                }
+
+                .chart-view {
+                    margin-top: 2rem;
+                }
+            }
+
+            .grafico-operador {
+                background-color: #3a3a3a;
+                text-align: center;
+                padding: 3rem 2rem;
+                border-radius: 20px;
+                margin: 20px 0;
+                width: calc(40% - 20px);
+
+                #chartRestanteAdiantamento {
+                    width: 400px !important;
+                    height: 400px !important;
+                    margin: 0 auto;
+                }
+
+                a.button {
+                    padding: 10px 15px;
+                    border: 1px solid #fff;
+                    background-color: transparent;
+                    margin-top: -50px;
+                    z-index: 5;
+
+                    .ico {
+                        display: inline-table;
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+            .grafico-devolucoes {
+                background-color: #3a3a3a;
+                text-align: center;
+                padding: 3rem 2rem;
+                border-radius: 20px;
+                margin: 20px 0;
+                width: calc(64% - 20px);
+
+                .options {
+                    .wrapper-inputs {
+                        @include grid(50%);
+
+                        .textfield {
+                            width: 47%;
+                        }
+                    }
+                }
+
+                .chart-view {
+                    margin-top: 2rem;
+                }
+            }
+
+            .col-itens-valores-operador {
+                width: calc(36% - 20px);
+
+                .item {
+                    width: 100%;
+                    background-color: #3a3a3a;
+                    padding: 2rem;
+                    border-radius: 20px;
+                    margin-bottom: 2rem;
+                    margin-top: 20px;
+
+                    .wrapper-valor-a-dever {
+                        @include grid();
+                        align-items: center;
+                        align-content: center;
+                        justify-content: flex-end;
+                        gap: 10px;
+                        padding-bottom: 20px;
+
+                        .textfield {
+                            width: 35%;
+                            padding: 10px;
+                            background-color: #3a3a3a;
+                            color: #fff;
+                            border-radius: 10px;
+                            border-color: #fff;
+                        }
+                    }
+
+                    .result{
+                        @include grid();
+                        padding: 10px 0 10px 0;
+
+                        .ico{
+                            width: 50px;
+                            align-self: center;
+                        }
+
+                        .txt{
+                            width: calc(100% - 60px);
+                            align-self: center;
+
+                            p{
+                                padding-top: 0;
+                                font-size: 14px;
+                                color: #8C89B4;
+                            }
+
+                            h3{
+                                font-size: 24px;
+                                color: #fff;
+                                font-weight: 300;
+                                font-style: italic;
+                            }
+
+
+                        }
+                    }
+                }
+            }
+        }
+
+        .vendas-do-mes {
+            background-color: #3a3a3a;
+            border-radius: 19px;
+
+            .tt-table h3 {
+                color: #fff !important;
+            }
+
+            .responsive-table__head__title {
+                font-size: 12px !important;
+            }
+
+            .responsive-table__row {
+                display: grid;
+                border-bottom: 1px solid $table-border-color;
+                padding: 0 1.5rem;
+
+                @include min-tablet {
+                    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+                }
+
+                th,
+                td {
+                    padding: 1rem;
+                }
+            }
+
+            .number-page {
+                color: #fff;
+            }
+
+            .responsive-table__head {
+                background-color: #3a3a3a;
+            }
+
+            .responsive-table__body {
+                background-color: #3a3a3a;
+                color: #fff;
+
+                p {
+                    color: #fff;
+                }
+            }
+
+            select,
+            input {
+                width: 100%;
+                padding: 10px;
+                background-color: #3a3a3a;
+                color: #fff;
+                border-radius: 10px;
+                border-color: #fff;
+                margin: 3px;
+            }
+        }
+    }
+}
