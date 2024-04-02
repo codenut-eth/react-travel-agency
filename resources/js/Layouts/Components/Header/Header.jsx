@@ -1,5 +1,5 @@
 import React from 'react';
-import logout from "../../../../public/assets/svg/ico-logout.svg";
+import logout from "../../../../../public/assets/svg/ico-logout.svg";
 const Header = () => {
     return (
         <header className="sec-header">

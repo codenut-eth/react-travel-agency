@@ -7,11 +7,16 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
+//		'canLogin' => Route::has('Afiliados'),
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
         'phpVersion' => PHP_VERSION,
     ]);
 });
+
+Route::get('/home/afiliados', function () {
+	return Inertia::render('Home/Afiliados');
+})->name('afiliados');
 
 Route::middleware([
     'auth:sanctum',
