@@ -1,3 +1,5 @@
+*Below we will have the description in English and Portuguese*
+
 Sistema Web para Agência de Viagens
 Este projeto visa desenvolver um sistema web completo para uma agência de viagens, oferecendo funcionalidades de
 gerenciamento de reservas, pacotes turísticos, clientes e muito mais. A interface do usuário, já desenvolvida em React,
