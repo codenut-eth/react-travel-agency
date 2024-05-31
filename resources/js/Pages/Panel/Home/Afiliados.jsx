@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
-import DefaultPage from '../../Layouts/Components/DefaultPage';
-import notPagDeAfiliados from '../../../../public/assets/images/not-pag-de-afiliados.png';
+import DefaultPage from '../../../Layouts/Components/DefaultPage.jsx';
+import notPagDeAfiliados from '../../../../../public/assets/images/not-pag-de-afiliados.png';
 const AfiliadosHomePage = () => {
     return (
         <DefaultPage>
